@@ -2,7 +2,6 @@
 
 This is a basic hotel reservation project implemented in Java with JDBC in MySQL. The application allows users to perform all CRUD operations (Create, Read, Update, Delete) on guest reservations.
 
-[](./assets/hotelReservation.mp4)
 ## Table of Contents
 
 - [Features](#features)
