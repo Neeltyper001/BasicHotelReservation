@@ -38,8 +38,9 @@ public class CoreClass {
                  case 5: DeleteReservation.deleteReservations(connection,scanner);
                      break;
 
-                 case 0:   Exit.exit();
-                            System.out.println("Exiting");;
+                 case 0:    this.databaseConnection.closeConnection();
+                            this.scanner.close();
+                            Exit.exit();
                       break;
 
                  default:

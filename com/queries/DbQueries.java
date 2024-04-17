@@ -33,6 +33,8 @@ public class DbQueries {
                 String reservationDate = resultSet.getTimestamp("reservation_date").toString();
                 System.out.println("=   "+id+"           "+guestName+"            "+roomNumber+"              "+contact+"               "+reservationDate+" =");
             }
+            resultSet.close();
+            statement.close();
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }
@@ -52,8 +54,11 @@ public class DbQueries {
                 System.out.println("=                                                                                                   =");
                 System.out.println("=====================================================================================================");
             }
+            resultSet.close();
+            statement.close();
         }catch(SQLException e){
             System.out.println(e.getMessage());
+
         }
 
     }
@@ -65,6 +70,7 @@ public class DbQueries {
             Statement statement = connection.createStatement();
             int resultSet = statement.executeUpdate(updateGuestNameQuery);
             System.out.println("Successfull updation!!"+resultSet+" rows affected");
+            statement.close();
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }
@@ -99,6 +105,7 @@ public class DbQueries {
             Statement statement = connection.createStatement();
             int resultSet = statement.executeUpdate(updateGuestContactQuery);
             System.out.println("Successfull updation!!"+resultSet+" rows affected");
+            statement.close();
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }
@@ -111,6 +118,7 @@ public class DbQueries {
             Statement statement = connection.createStatement();
             int resultSet = statement.executeUpdate(updateGuestContactQuery);
             System.out.println("Successfull updation!!"+resultSet+" rows affected");
+            statement.close();
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }
