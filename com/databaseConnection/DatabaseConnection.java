@@ -14,7 +14,7 @@ public class DatabaseConnection {
         this.databaseName = "hotelreservation";
         this.URL = "jdbc:mysql://localhost:3306/"+databaseName;
         this.username = "root";
-        this.password = "Neelesh@6172";
+        this.password = "**********";
 
 
         try{
